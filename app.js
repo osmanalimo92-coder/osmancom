@@ -17,20 +17,18 @@ const PACKAGES = {
 const translations = {
   en: {
     "nav-services": "Services", "nav-work": "Selected work", "nav-about": "About", "nav-cta": "Start a project",
-    "welcome-eyebrow": "A warm welcome", "welcome-title": "Welcome to our website",
-    "welcome-lead": "Welcome to a world of excellence and creativity, where quality meets professionalism and your ambitions become tangible achievements.",
-    "welcome-paragraph-one": "We are delighted by your visit and grateful for your trust and interest in our services. We are committed to providing complete solutions that meet your needs to the highest standards of quality and reliability, while building lasting relationships based on trust and integrity.",
-    "welcome-paragraph-two": "We strive to be the right choice for our clients by continually developing our services and offering an excellent experience shaped by ease, prompt delivery, and quality results.",
-    "welcome-closing": "Thank you for visiting. We look forward to beginning a successful partnership with you and taking a step toward a more distinguished future.",
-    "welcome-motto": "Your trust is the foundation of our success; your satisfaction is our goal.",
+    "welcome-eyebrow": "A warm welcome", "welcome-title": "Business support that starts with listening",
+    "welcome-lead": "Tell me where you want to go. I’ll help you find a clear, practical way forward.",
+    "welcome-paragraph-one": "From promoting your business and translating documents to sourcing employment contracts and projects, you can get dependable support in one place.",
+    "welcome-closing": "Have a question? Send a no-obligation enquiry and we’ll talk through what you need.",
     "hero-eyebrow": "Independent business services partner <span class=\"eyebrow-divider\"></span> Saudi Arabia &amp; worldwide",
-    "hero-title": "Make your next<br>big move <span>look the part.</span>",
-    "hero-description": "Friendly, reliable support for your business — from website design and advertising to translation and project sourcing.",
-    "hero-primary": "Request a project quote", "hero-secondary": "Explore services", "hero-availability": "Taking enquiries for new projects",
+    "hero-title": "Practical support<br>for your <span>next move.</span>",
+    "hero-description": "Friendly, reliable support for your business — from advertising and translation to finding the right contracts and projects.",
+    "hero-primary": "Tell me what you need", "hero-secondary": "View services", "hero-availability": "Taking enquiries for new projects",
     "portrait-alt": "Osman Adam Ali, business services consultant", "portrait-name": "Osman Adam Ali",
-    "visual-strategy": "Thoughtful strategy<br><strong>Creative delivery</strong>", "visual-partner": "One partner.<br><strong>Ideas to impact.</strong>",
-    "hero-foot-left": "DESIGN THAT EARNS ATTENTION", "hero-foot-right": "DETAIL THAT EARNS TRUST", "scroll-services": "Scroll to services",
-    "services-eyebrow": "What I can do for you", "services-title": "Good thinking.<br><span>Beautifully done.</span>",
+    "visual-strategy": "Clear advice<br><strong>Practical steps</strong>", "visual-partner": "One partner.<br><strong>Here to help.</strong>",
+    "hero-foot-left": "HELP FOR YOUR BUSINESS", "hero-foot-right": "CLEAR. RELIABLE. PERSONAL.", "scroll-services": "Scroll to services",
+    "services-eyebrow": "How I can help", "services-title": "One trusted partner.<br><span>Practical business support.</span>",
     "services-intro": "Practical services to help your business communicate clearly, reach customers, and move projects forward.",
     "service-web-title": "Website design", "service-web-description": "Clear, confident digital experiences that turn your first impression into a reason to get in touch.", "service-web-link": "Discuss your website",
     "service-brand-title": "Graphic &amp; brand design", "service-brand-description": "Distinctive visual identities and campaign assets that make your business feel unmistakably yours.", "service-brand-link": "Shape your brand",
@@ -48,8 +46,8 @@ const translations = {
     "pricing-type-execution": "04 / END TO END", "package-execution": "Project execution &amp; completion", "pricing-description-execution": "Request a team to execute your project and complete its tasks.",
     "pricing-badge": "FULL PROJECT SUPPORT", "pricing-select": "Choose this service", "currency": "SAR",
     "pricing-note": "Prices are shown as provided. Confirm the website subscription term, deliverables, staffing, and project scope when enquiring. No payment is collected on this website.",
-    "work-eyebrow": "A taste of what’s possible", "work-title": "Ideas with <span>room to grow.</span>",
-    "work-intro": "A few creative directions to show how thoughtful visuals can bring a business story to life.",
+    "work-eyebrow": "Ideas in action", "work-title": "A little inspiration for <span>your next move.</span>",
+    "work-intro": "Explore a few sample directions for clear communication, confident branding, and effective advertising.",
     "work-note": "Concept studies to show creative direction; not presented as commissioned client work.",
     "work-tag-web": "WEB DESIGN · CONCEPT", "work-category-web": "Digital presence", "work-title-web": "Clear ideas. Confident experience.",
     "work-label-web": "Discuss a website design concept",
@@ -66,7 +64,8 @@ const translations = {
     "about-description-two": "From the first idea to the final details, I bring website and brand design, advertising and marketing, translation, employment contract and project sourcing, and practical consulting together around your needs.",
     "about-cta": "Tell me what you’re building", "about-value-one": "Listen first", "about-value-two": "Think it through", "about-value-three": "Make it memorable",
     "contact-eyebrow": "Your next move starts here", "contact-title": "Let’s make something<br><span>worth talking about.</span>",
-    "contact-intro": "Select a service and package, then share a little about what you need. Your selected price will be included in your WhatsApp enquiry.",
+    "contact-intro": "Choose a service and package, share what you need, and send your enquiry directly on WhatsApp. No payment is collected here.",
+    "quick-whatsapp": "Quick WhatsApp", "quick-whatsapp-label": "Start a WhatsApp conversation",
     "form-title": "PROJECT ENQUIRY", "form-step": "01 — 04", "form-name": "Your name", "form-business": "Business or organization",
     "form-service": "Service you need", "form-service-option": "Choose a service", "form-package": "Service package",
     "form-package-option": "Choose a service package", "form-brief": "What would you like to make happen?",
@@ -82,6 +81,7 @@ const translations = {
     "contact-direct": "Direct line", "contact-whatsapp": "Message me on WhatsApp", "contact-location": "Saudi Arabia · Available worldwide",
     "qr-caption": "SCAN TO SAVE<br>OSMANCOM", "footer-tagline": "Creative work with purpose. Built together.",
     "footer-top": "Back to top ↑", "footer-copyright": "© 2026 OSMANCOM · Osman Adam Ali",
+    "footer-tagline": "Practical support for your next step.",
     "footer-services": "Website design · Brand design · Advertising & marketing · Translation · Sourcing",
     "custom-selection": "Your selected package: custom project — let’s discuss the scope and price.",
     "selection-prefix": "Your selected package: ", "selection-suffix": ".",
@@ -93,20 +93,18 @@ const translations = {
   },
   ar: {
     "nav-services": "الخدمات", "nav-work": "أعمال مختارة", "nav-about": "نبذة عني", "nav-cta": "ابدأ مشروعك",
-    "welcome-eyebrow": "ترحيب حار", "welcome-title": "أهلاً وسهلاً بكم في موقعنا الإلكتروني",
-    "welcome-lead": "مرحبًا بكم في عالم التميز والإبداع، حيث تلتقي الجودة بالاحترافية، وتتحول طموحاتكم إلى إنجازات ملموسة.",
-    "welcome-paragraph-one": "يسعدنا زيارتكم لموقعنا الإلكتروني، ونتشرف بثقتكم واهتمامكم بخدماتنا. نحرص على تقديم حلول متكاملة تلبي احتياجاتكم، وفق أعلى معايير الجودة والموثوقية، مع الالتزام بالتميز والابتكار وبناء علاقات مستدامة قائمة على الثقة والمصداقية.",
-    "welcome-paragraph-two": "نسعى دائمًا إلى أن نكون الخيار الأمثل لعملائنا، من خلال تطوير خدماتنا، وتقديم تجربة مميزة تجمع بين سهولة التعامل، وسرعة الإنجاز، وجودة النتائج.",
-    "welcome-closing": "شكرًا لزيارتكم، ونتطلع إلى أن تكون بداية علاقتنا بكم شراكة ناجحة وخطوة نحو مستقبل أكثر تميزًا.",
-    "welcome-motto": "ثقتكم أساس نجاحنا، ورضاكم غايتنا.",
+    "welcome-eyebrow": "أهلاً وسهلاً", "welcome-title": "دعم أعمالك يبدأ بالاستماع إليك",
+    "welcome-lead": "أخبرني بطموحك، وسأساعدك في إيجاد خطوات عملية وواضحة لتحقيقه.",
+    "welcome-paragraph-one": "من الترويج لأعمالك وترجمة المستندات إلى البحث عن عقود العمل والمشاريع، نوفر لك دعماً موثوقاً في مكان واحد.",
+    "welcome-closing": "لديك استفسار؟ أرسل طلبك دون أي التزام، وسنناقش احتياجاتك معاً.",
     "hero-eyebrow": "شريك مستقل لخدمات الأعمال <span class=\"eyebrow-divider\"></span> المملكة العربية السعودية والعالم",
-    "hero-title": "اجعل خطوتك القادمة<br><span>تلفت الأنظار.</span>",
-    "hero-description": "دعم موثوق لأعمالك؛ من تصميم المواقع والإعلان إلى الترجمة واستقطاب عقود العمل والمشاريع.",
-    "hero-primary": "اطلب عرض سعر لمشروعك", "hero-secondary": "اكتشف الخدمات", "hero-availability": "أستقبل طلبات المشاريع الجديدة",
+    "hero-title": "دعم عملي<br><span>لخطوتك القادمة.</span>",
+    "hero-description": "دعم موثوق لأعمالك؛ من الإعلان والترجمة إلى البحث عن عقود العمل والمشاريع المناسبة.",
+    "hero-primary": "أخبرني بما تحتاج", "hero-secondary": "اكتشف الخدمات", "hero-availability": "أستقبل طلبات المشاريع الجديدة",
     "portrait-alt": "عثمان آدم علي، مستشار خدمات الأعمال", "portrait-name": "عثمان آدم علي",
-    "visual-strategy": "استراتيجية مدروسة<br><strong>تنفيذ إبداعي</strong>", "visual-partner": "شريك واحد.<br><strong>من الفكرة إلى الأثر.</strong>",
-    "hero-foot-left": "تصميم يجذب الانتباه", "hero-foot-right": "تفاصيل تبني الثقة", "scroll-services": "انتقل إلى الخدمات",
-    "services-eyebrow": "كيف أستطيع مساعدتك", "services-title": "أفكار مدروسة.<br><span>تنفيذ بإتقان.</span>",
+    "visual-strategy": "نصيحة واضحة<br><strong>خطوات عملية</strong>", "visual-partner": "شريك واحد.<br><strong>دائماً لمساعدتك.</strong>",
+    "hero-foot-left": "دعم لأعمالك", "hero-foot-right": "وضوح. ثقة. اهتمام.", "scroll-services": "انتقل إلى الخدمات",
+    "services-eyebrow": "كيف أستطيع مساعدتك", "services-title": "شريك واحد تثق به.<br><span>دعم عملي لأعمالك.</span>",
     "services-intro": "خدمات عملية تساعد أعمالك على التواصل بوضوح والوصول إلى العملاء ودفع المشاريع إلى الأمام.",
     "service-web-title": "تصميم المواقع", "service-web-description": "تجارب رقمية واضحة واحترافية تحوّل الانطباع الأول إلى فرصة للتواصل.", "service-web-link": "تحدث عن موقعك",
     "service-brand-title": "التصميم الجرافيكي والهوية", "service-brand-description": "هويات بصرية ومواد تسويقية مميزة تعبّر عن أعمالك بأسلوب خاص.", "service-brand-link": "طوّر هويتك",
@@ -124,8 +122,8 @@ const translations = {
     "pricing-type-execution": "٠٤ / تنفيذ متكامل", "package-execution": "تنفيذ المشروع وإتمامه", "pricing-description-execution": "اطلب فريقاً لتنفيذ مشروعك وإنجاز جميع مهامه.",
     "pricing-badge": "دعم متكامل للمشروع", "pricing-select": "اختر هذه الخدمة", "currency": "ريال سعودي",
     "pricing-note": "الأسعار كما زودتني بها. يرجى تأكيد مدة اشتراك الموقع والمخرجات والموظفين ونطاق المشروع عند الاستفسار. لا تُحصّل أي مدفوعات عبر هذا الموقع.",
-    "work-eyebrow": "لمحة عمّا يمكن إنجازه", "work-title": "أفكار تملك <span>مساحة للنمو.</span>",
-    "work-intro": "نماذج لاتجاهات إبداعية توضّح كيف تروي العناصر البصرية قصة أعمالك.",
+    "work-eyebrow": "أفكار تتحول إلى أثر", "work-title": "إلهام <span>لخطوتك القادمة.</span>",
+    "work-intro": "اطّلع على نماذج توضح أساليب التواصل الواضح والهوية الواثقة والإعلان الفعال.",
     "work-note": "هذه نماذج تصورية لعرض التوجه الإبداعي وليست أعمالاً منفذة لعملاء.",
     "work-tag-web": "تصميم مواقع · نموذج تصوري", "work-category-web": "حضور رقمي", "work-title-web": "أفكار واضحة. وتجربة واثقة.",
     "work-label-web": "ناقش نموذج تصميم موقع إلكتروني",
@@ -142,7 +140,8 @@ const translations = {
     "about-description-two": "من الفكرة الأولى إلى أدق التفاصيل، أجمع بين تصميم المواقع والهويات والإعلان والتسويق والترجمة واستقطاب عقود العمل والمشاريع والاستشارات العملية بما يخدم احتياجاتك.",
     "about-cta": "أخبرني عن مشروعك", "about-value-one": "أستمع أولاً", "about-value-two": "أخطط بعناية", "about-value-three": "أصنع ما لا يُنسى",
     "contact-eyebrow": "خطوتك القادمة تبدأ هنا", "contact-title": "لنصنع معاً ما<br><span>يستحق الحديث عنه.</span>",
-    "contact-intro": "اختر الخدمة والباقة، ثم أخبرني باحتياجاتك. سيظهر السعر المختار في رسالة واتساب.",
+    "contact-intro": "اختر الخدمة والباقة، وأخبرني بما تحتاج إليه، ثم أرسل استفسارك مباشرة عبر واتساب. لا تُحصّل أي مدفوعات هنا.",
+    "quick-whatsapp": "تواصل سريع عبر واتساب", "quick-whatsapp-label": "ابدأ محادثة عبر واتساب",
     "form-title": "استفسار عن مشروع", "form-step": "٠١ — ٠٤", "form-name": "اسمك", "form-business": "اسم الشركة أو المؤسسة",
     "form-service": "الخدمة التي تحتاج إليها", "form-service-option": "اختر الخدمة", "form-package": "الباقة",
     "form-package-option": "اختر الباقة", "form-brief": "ما الذي ترغب في إنجازه؟",
@@ -158,6 +157,7 @@ const translations = {
     "contact-direct": "للتواصل مباشرة", "contact-whatsapp": "راسلني عبر واتساب", "contact-location": "السعودية · متاح للعمل حول العالم",
     "qr-caption": "امسح الرمز<br>لحفظ بيانات عثمان كوم", "footer-tagline": "عمل إبداعي هادف. ننجزه معاً.",
     "footer-top": "العودة إلى الأعلى ↑", "footer-copyright": "© ٢٠٢٦ عثمان كوم · عثمان آدم علي",
+    "footer-tagline": "دعم عملي لخطوتك القادمة.",
     "footer-services": "تصميم المواقع · الهوية · الإعلان والتسويق · الترجمة · استقطاب العقود والمشاريع",
     "custom-selection": "الباقة المختارة: مشروع خاص — لنتناقش في نطاق العمل والسعر.",
     "selection-prefix": "الباقة المختارة: ", "selection-suffix": ".",
@@ -188,11 +188,19 @@ function applyLanguage(language) {
   document.documentElement.lang = language;
   document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
   document.title = language === "ar"
-    ? "عثمان كوم — خدمات الأعمال الطموحة"
-    : "OSMANCOM — Business services for ambitious businesses";
+    ? "عثمان كوم — دعم عملي لأعمالك"
+    : "OSMANCOM — Practical support for your business";
   document.querySelector("#page-description").content = language === "ar"
     ? "عثمان كوم — تصميم المواقع والهويات والإعلان والتسويق والترجمة واستقطاب عقود العمل والمشاريع والاستشارات."
     : "OSMANCOM — website and brand design, advertising and marketing, translation, employment contract and project sourcing, and consulting.";
+  document.querySelector("#page-og-title").content = language === "ar"
+    ? "عثمان كوم — دعم عملي لأعمالك"
+    : "OSMANCOM — Practical support for your business";
+  document.querySelector("#page-og-description").content = language === "ar"
+    ? "دعم موثوق لأعمالك؛ من الإعلان والترجمة إلى البحث عن عقود العمل والمشاريع المناسبة."
+    : "Friendly, reliable support for your business — from advertising and translation to finding the right contracts and projects.";
+  document.querySelector("#page-twitter-title").content = document.querySelector("#page-og-title").content;
+  document.querySelector("#page-twitter-description").content = document.querySelector("#page-og-description").content;
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.innerHTML = messages[element.dataset.i18n];
@@ -208,6 +216,10 @@ function applyLanguage(language) {
   languageButton.textContent = language === "ar" ? "English" : "العربية";
   languageButton.lang = language === "ar" ? "en" : "ar";
   languageButton.setAttribute("aria-label", language === "ar" ? "View the website in English" : "عرض الموقع باللغة العربية");
+  const quickMessage = language === "ar"
+    ? "مرحباً عثمان، أود الاستفسار عن خدمات الأعمال."
+    : "Hi Osman, I’d like to ask about your business services.";
+  document.querySelector("#floating-whatsapp").href = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(quickMessage)}`;
   renderContactQr();
   updatePackageSelection();
 }
