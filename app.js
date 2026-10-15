@@ -11,12 +11,13 @@ const PACKAGES = {
   consultation: { name: "Project consultation & inquiries", price: "USD 4,000" },
   staff: { name: "Request staff for specific tasks", price: "USD 1,000" },
   execution: { name: "Project execution & completion", price: "USD 10,000" },
+  quote: { name: "Scholarship or job-application support", price: "To be discussed" },
   custom: { name: "Other / discuss a custom project", price: "To be discussed" }
 };
 
 const translations = {
   en: {
-    "nav-services": "Services", "nav-tourism": "Tourism", "nav-work": "Selected work", "nav-about": "About", "nav-cta": "Start a project",
+    "nav-services": "Services", "nav-tourism": "Tourism", "nav-opportunities": "Study &amp; work", "nav-work": "Selected work", "nav-about": "About", "nav-cta": "Start a project",
     "tour-eyebrow": "A little more sunshine", "tour-title": "Your next escape,<br><span>beautifully planned.</span>",
     "tour-intro": "Explore travel support for tickets, hotel stays, local guides, and thoughtful trips for couples, friends, and families.",
     "tour-book-cta": "Plan a trip", "sound-on": "Play gentle sounds", "sound-off": "Turn sounds off",
@@ -80,6 +81,19 @@ const translations = {
     "hero-foot-left": "HELP FOR YOUR BUSINESS", "hero-foot-right": "CLEAR. RELIABLE. PERSONAL.", "scroll-services": "Scroll to services",
     "services-eyebrow": "How I can help", "services-title": "One trusted partner.<br><span>Practical business support.</span>",
     "services-intro": "Practical services to help your business communicate clearly, reach customers, and move projects forward.",
+    "opportunity-eyebrow": "Study & work worldwide", "opportunity-title": "Clear steps for <span>your next opportunity.</span>",
+    "opportunity-intro": "From university scholarships to international job applications, understand the process before you decide what support you need.",
+    "opportunity-step-one-title": "Tell us your goal", "opportunity-step-one-text": "Share your target countries, study or work interests, qualifications, and important deadlines. General details are enough for an initial enquiry.",
+    "opportunity-step-two-title": "Review suitable options", "opportunity-step-two-text": "We discuss potential opportunities, eligibility criteria, required documents, and the support that may fit your situation.",
+    "opportunity-step-three-title": "Agree on support", "opportunity-step-three-text": "Review the proposed tasks, timeline, and a custom quote. Work starts only after you agree to the scope and price.",
+    "opportunity-step-four-title": "Prepare your applications", "opportunity-step-four-text": "Get agreed help organizing materials and preparing or submitting applications. Student flights and accommodation can be discussed separately.",
+    "opportunity-disclaimer": "Scholarship awards, university admissions, job offers, visas, and travel availability are decided by the relevant institutions, employers, authorities, and providers; they cannot be guaranteed. Any travel arrangements and costs are confirmed with you before booking.",
+    "opportunity-faq-title": "Frequently asked questions",
+    "opportunity-faq-one-question": "Can you guarantee a scholarship, admission, job, or visa?", "opportunity-faq-one-answer": "No. Decisions are made by universities, scholarship providers, employers, and immigration authorities. We can help with the agreed application support, but cannot promise an outcome.",
+    "opportunity-faq-two-question": "What should I share for an initial enquiry?", "opportunity-faq-two-answer": "Share your general goal, preferred countries, area of study or work, and deadlines. Do not send passwords, payment details, passport scans, or sensitive documents through this public form or WhatsApp.",
+    "opportunity-faq-three-question": "How are scholarship and job-application services priced?", "opportunity-faq-three-answer": "These services are quoted individually after we discuss your needs, tasks, and timeline. You can review and agree to the scope and price before any work begins.",
+    "opportunity-faq-four-question": "Can you also help with student flights and accommodation?", "opportunity-faq-four-answer": "Yes, we can discuss flight booking and student accommodation options separately. Availability and costs are checked with you before any booking is made.",
+    "opportunity-cta": "Ask about study or job support",
     "service-web-title": "Website design", "service-web-description": "Clear, confident digital experiences that turn your first impression into a reason to get in touch.", "service-web-link": "Discuss your website",
     "service-brand-title": "Graphic &amp; brand design", "service-brand-description": "Distinctive visual identities and campaign assets that make your business feel unmistakably yours.", "service-brand-link": "Shape your brand",
     "service-marketing-title": "Advertising &amp; marketing for your business", "service-marketing-description": "Reach the right customers with clear advertising and practical marketing tailored to your business.", "service-marketing-link": "Promote your business",
@@ -114,7 +128,7 @@ const translations = {
     "about-description-two": "From the first idea to the final details, I bring website and brand design, advertising and marketing, translation, employment contract and project sourcing, travel planning, and practical consulting together around your needs.",
     "about-cta": "Tell me what you’re building", "about-value-one": "Listen first", "about-value-two": "Think it through", "about-value-three": "Make it memorable",
     "contact-eyebrow": "Your next move starts here", "contact-title": "Let’s make something<br><span>worth talking about.</span>",
-    "contact-intro": "Choose a service and package, share what you need, and send your enquiry directly on WhatsApp. No payment is collected here.",
+    "contact-intro": "Choose a service and tell us what you need. Existing package prices are included in your enquiry; scholarship and job-application support is quoted individually.",
     "quick-whatsapp": "Quick WhatsApp", "quick-whatsapp-label": "Start a WhatsApp conversation",
     "form-title": "PROJECT ENQUIRY", "form-step": "01 — 04", "form-name": "Your name", "form-business": "Business or organization",
     "form-service": "Service you need", "form-service-option": "Choose a service", "form-package": "Service package",
@@ -127,6 +141,8 @@ const translations = {
     "package-option-consultation": "Project consultation &amp; inquiries — USD 4,000",
     "package-option-staff": "Request staff for specific tasks — USD 1,000",
     "package-option-execution": "Project execution &amp; completion — USD 10,000",
+    "package-option-quote": "Scholarship or job support — request a quote",
+    "package-quote": "Scholarship or job-application support",
     "package-option-custom": "Other / discuss a custom project",
     "contact-direct": "Direct line", "contact-whatsapp": "Message me on WhatsApp", "contact-location": "Saudi Arabia · Available worldwide",
     "qr-caption": "SCAN TO SAVE<br>OSMANCOM", "footer-tagline": "Creative work with purpose. Built together.",
@@ -134,15 +150,17 @@ const translations = {
     "footer-tagline": "Practical support for your next step.",
     "footer-services": "Website design · Brand design · Advertising & marketing · Translation · Sourcing · Travel planning",
     "custom-selection": "Your selected package: custom project — let’s discuss the scope and price.",
+    "quote-selection": "Scholarship or job support — quote requested; scope and price to be agreed before work begins.",
+    "quote-request": "To be discussed after reviewing the scope",
     "selection-prefix": "Your selected package: ", "selection-suffix": ".",
     "whatsapp-greeting": "Hello Osman, I’d like to discuss a project.",
     "whatsapp-name": "Name", "whatsapp-business": "Business", "whatsapp-not-provided": "Not provided",
-    "whatsapp-service": "Creative service", "whatsapp-package": "Service package", "whatsapp-price": "Listed price",
+    "whatsapp-service": "Service", "whatsapp-package": "Service package", "whatsapp-price": "Price / quote",
     "whatsapp-details": "Project details", "qr-note": "Website and brand design, advertising and marketing, translation, employment contract and project sourcing, travel planning, and consulting.",
     "qr-label": "Scan to save Osman Adam Ali’s contact details", "qr-fallback": "Call Osman: +966 50 996 7336"
   },
   ar: {
-    "nav-services": "الخدمات", "nav-tourism": "السياحة", "nav-work": "أعمال مختارة", "nav-about": "نبذة عني", "nav-cta": "ابدأ مشروعك",
+    "nav-services": "الخدمات", "nav-tourism": "السياحة", "nav-opportunities": "الدراسة والعمل", "nav-work": "أعمال مختارة", "nav-about": "نبذة عني", "nav-cta": "ابدأ مشروعك",
     "tour-eyebrow": "رحلة مليئة بأشعة الشمس", "tour-title": "رحلتك القادمة،<br><span>نخطط لها بكل عناية.</span>",
     "tour-intro": "اكتشف خدمات التذاكر والإقامة الفندقية والمرشدين السياحيين والرحلات المصممة للأزواج والأصدقاء والعائلات.",
     "tour-book-cta": "خطط لرحلتك", "sound-on": "شغّل أصوات البحر الهادئة", "sound-off": "أوقف الأصوات",
@@ -206,6 +224,19 @@ const translations = {
     "hero-foot-left": "دعم لأعمالك", "hero-foot-right": "وضوح. ثقة. اهتمام.", "scroll-services": "انتقل إلى الخدمات",
     "services-eyebrow": "كيف أستطيع مساعدتك", "services-title": "شريك واحد تثق به.<br><span>دعم عملي لأعمالك.</span>",
     "services-intro": "خدمات عملية تساعد أعمالك على التواصل بوضوح والوصول إلى العملاء ودفع المشاريع إلى الأمام.",
+    "opportunity-eyebrow": "الدراسة والعمل حول العالم", "opportunity-title": "خطوات واضحة <span>لفرصتك القادمة.</span>",
+    "opportunity-intro": "من المنح الجامعية إلى طلبات التوظيف الدولية، تعرّف على الخطوات قبل تحديد الدعم الذي تحتاج إليه.",
+    "opportunity-step-one-title": "أخبرنا بهدفك", "opportunity-step-one-text": "شاركنا البلدان التي تفضلها واهتماماتك الدراسية أو المهنية ومؤهلاتك والمواعيد المهمة. تكفي معلومات عامة للاستفسار الأولي.",
+    "opportunity-step-two-title": "استكشف الخيارات المناسبة", "opportunity-step-two-text": "نناقش الفرص المحتملة وشروط الأهلية والمستندات المطلوبة والدعم الذي قد يناسبك.",
+    "opportunity-step-three-title": "اتفق على الدعم", "opportunity-step-three-text": "راجع المهام المقترحة والمدة والتكلفة المخصصة. لا يبدأ العمل إلا بعد موافقتك على نطاقه وسعره.",
+    "opportunity-step-four-title": "جهّز طلباتك", "opportunity-step-four-text": "احصل على الدعم المتفق عليه لتنظيم المواد وتجهيز الطلبات أو تقديمها. ويمكن مناقشة رحلات الطلاب والسكن بشكل منفصل.",
+    "opportunity-disclaimer": "تتخذ الجامعات ومقدمو المنح وأصحاب العمل والجهات الرسمية ومزودو السفر قرارات القبول والمنح والتوظيف والتأشيرات والتوافر؛ لذلك لا يمكن ضمان النتائج. نؤكد معك ترتيبات السفر والتكاليف قبل الحجز.",
+    "opportunity-faq-title": "الأسئلة الشائعة",
+    "opportunity-faq-one-question": "هل تضمنون الحصول على منحة أو قبول أو وظيفة أو تأشيرة؟", "opportunity-faq-one-answer": "لا. تتخذ الجامعات ومقدمو المنح وأصحاب العمل وجهات الهجرة القرارات. يمكننا تقديم الدعم المتفق عليه للطلب، لكن لا نستطيع ضمان النتيجة.",
+    "opportunity-faq-two-question": "ما المعلومات التي أشاركها للاستفسار الأولي؟", "opportunity-faq-two-answer": "شارك هدفك العام والبلدان المفضلة ومجال الدراسة أو العمل والمواعيد. لا ترسل كلمات المرور أو بيانات الدفع أو صور جواز السفر أو المستندات الحساسة عبر هذا النموذج أو واتساب.",
+    "opportunity-faq-three-question": "كيف تُحدد تكلفة خدمات المنح والوظائف؟", "opportunity-faq-three-answer": "نقدم عرضاً مخصصاً بعد مناقشة احتياجاتك والمهام والمدة. يمكنك مراجعة نطاق العمل والسعر والموافقة عليهما قبل بدء أي عمل.",
+    "opportunity-faq-four-question": "هل يمكنكم المساعدة في رحلات الطلاب والسكن؟", "opportunity-faq-four-answer": "نعم، يمكننا مناقشة خيارات حجز رحلات الطلاب والسكن بشكل منفصل. نتحقق من التوافر والتكاليف معك قبل إجراء أي حجز.",
+    "opportunity-cta": "استفسر عن دعم الدراسة أو العمل",
     "service-web-title": "تصميم المواقع", "service-web-description": "تجارب رقمية واضحة واحترافية تحوّل الانطباع الأول إلى فرصة للتواصل.", "service-web-link": "تحدث عن موقعك",
     "service-brand-title": "التصميم الجرافيكي والهوية", "service-brand-description": "هويات بصرية ومواد تسويقية مميزة تعبّر عن أعمالك بأسلوب خاص.", "service-brand-link": "طوّر هويتك",
     "service-marketing-title": "الإعلان والتسويق لأعمالك", "service-marketing-description": "استهدف عملاءك المناسبين بإعلانات واضحة وتسويق عملي مصمم ليناسب أعمالك.", "service-marketing-link": "روّج لأعمالك",
@@ -240,7 +271,7 @@ const translations = {
     "about-description-two": "من الفكرة الأولى إلى أدق التفاصيل، أجمع بين تصميم المواقع والهويات والإعلان والتسويق والترجمة واستقطاب عقود العمل والمشاريع وتخطيط السفر والاستشارات العملية بما يخدم احتياجاتك.",
     "about-cta": "أخبرني عن مشروعك", "about-value-one": "أستمع أولاً", "about-value-two": "أخطط بعناية", "about-value-three": "أصنع ما لا يُنسى",
     "contact-eyebrow": "خطوتك القادمة تبدأ هنا", "contact-title": "لنصنع معاً ما<br><span>يستحق الحديث عنه.</span>",
-    "contact-intro": "اختر الخدمة والباقة، وأخبرني بما تحتاج إليه، ثم أرسل استفسارك مباشرة عبر واتساب. لا تُحصّل أي مدفوعات هنا.",
+    "contact-intro": "اختر الخدمة وأخبرنا بما تحتاج إليه. تُضاف أسعار الباقات الحالية إلى استفسارك؛ أما دعم المنح والوظائف فيُسعّر حسب الطلب.",
     "quick-whatsapp": "تواصل سريع عبر واتساب", "quick-whatsapp-label": "ابدأ محادثة عبر واتساب",
     "form-title": "استفسار عن مشروع", "form-step": "٠١ — ٠٤", "form-name": "اسمك", "form-business": "اسم الشركة أو المؤسسة",
     "form-service": "الخدمة التي تحتاج إليها", "form-service-option": "اختر الخدمة", "form-package": "الباقة",
@@ -253,6 +284,8 @@ const translations = {
     "package-option-consultation": "استشارات واستفسارات المشاريع — ٤٬٠٠٠ دولار أمريكي",
     "package-option-staff": "طلب موظفين لمهام محددة — ١٬٠٠٠ دولار أمريكي",
     "package-option-execution": "تنفيذ المشروع وإتمامه — ١٠٬٠٠٠ دولار أمريكي",
+    "package-option-quote": "دعم المنح أو التوظيف — اطلب عرض سعر",
+    "package-quote": "دعم التقديم على المنح أو الوظائف",
     "package-option-custom": "خدمة أخرى / ناقش مشروعاً خاصاً",
     "contact-direct": "للتواصل مباشرة", "contact-whatsapp": "راسلني عبر واتساب", "contact-location": "السعودية · متاح للعمل حول العالم",
     "qr-caption": "امسح الرمز<br>لحفظ بيانات عثمان كوم", "footer-tagline": "عمل إبداعي هادف. ننجزه معاً.",
@@ -260,10 +293,12 @@ const translations = {
     "footer-tagline": "دعم عملي لخطوتك القادمة.",
     "footer-services": "تصميم المواقع · الهوية · الإعلان والتسويق · الترجمة · استقطاب العقود والمشاريع · تخطيط السفر",
     "custom-selection": "الباقة المختارة: مشروع خاص — لنتناقش في نطاق العمل والسعر.",
+    "quote-selection": "دعم المنح أو التوظيف — اطلب عرض سعر؛ يتم الاتفاق على نطاق العمل والتكلفة قبل البدء.",
+    "quote-request": "يُحدد بعد مراجعة نطاق العمل",
     "selection-prefix": "الباقة المختارة: ", "selection-suffix": ".",
     "whatsapp-greeting": "مرحباً عثمان، أرغب في مناقشة مشروع.",
     "whatsapp-name": "الاسم", "whatsapp-business": "الشركة", "whatsapp-not-provided": "لم يذكر",
-    "whatsapp-service": "الخدمة الإبداعية", "whatsapp-package": "الباقة", "whatsapp-price": "السعر المعلن",
+    "whatsapp-service": "الخدمة", "whatsapp-package": "الباقة", "whatsapp-price": "السعر / عرض السعر",
     "whatsapp-details": "تفاصيل المشروع", "qr-note": "تصميم المواقع والهويات والإعلان والتسويق والترجمة واستقطاب عقود العمل والمشاريع وتخطيط السفر والاستشارات.",
     "qr-label": "امسح الرمز لحفظ بيانات عثمان آدم علي", "qr-fallback": "اتصل بعثمان: ‎+٩٦٦ ٥٠ ٩٩٦ ٧٣٣٦"
   }
@@ -365,6 +400,7 @@ function renderContactQr() {
 }
 
 function formatPrice(price) {
+  if (price === "To be discussed") return translations[currentLanguage]["quote-request"];
   if (currentLanguage !== "ar") return price;
   const digits = price.replace("USD ", "").replace("5,000", "٥٬٠٠٠").replace("4,000", "٤٬٠٠٠").replace("1,000", "١٬٠٠٠").replace("10,000", "١٠٬٠٠٠");
   return `${digits} دولار أمريكي`;
@@ -381,7 +417,10 @@ document.querySelectorAll("[data-service-link]").forEach((link) => {
     const service = link.dataset.serviceLink;
     const select = document.querySelector('[name="service"]');
     const option = Array.from(select.options).find((item) => item.value === service);
-    if (option) select.value = option.value;
+    if (option) {
+      select.value = option.value;
+      select.dispatchEvent(new Event("change"));
+    }
   });
 });
 
@@ -397,8 +436,22 @@ function updatePackageSelection() {
     return;
   }
   packageSelection.textContent = selection.price === "To be discussed"
-    ? messages["custom-selection"]
+    ? packageSelect.value === "quote" ? messages["quote-selection"] : messages["custom-selection"]
     : `${messages["selection-prefix"]}${messages[`package-${packageSelect.value}`].replaceAll("&amp;", "&")} — ${formatPrice(selection.price)}${messages["selection-suffix"]}`;
+}
+
+const serviceSelect = document.querySelector("#project-form [name='service']");
+
+function updateServiceQuote() {
+  const quoteOption = packageSelect.querySelector('option[value="quote"]');
+  const needsQuote = ["Scholarship applications", "Global job applications"].includes(serviceSelect.value);
+  quoteOption.disabled = !needsQuote;
+  if (needsQuote) {
+    packageSelect.value = "quote";
+  } else if (packageSelect.value === "quote") {
+    packageSelect.value = "";
+  }
+  updatePackageSelection();
 }
 
 document.querySelectorAll("[data-package]").forEach((link) => {
@@ -409,6 +462,7 @@ document.querySelectorAll("[data-package]").forEach((link) => {
 });
 
 packageSelect.addEventListener("change", updatePackageSelection);
+serviceSelect.addEventListener("change", updateServiceQuote);
 
 function updateSoundButton(isPlaying) {
   const button = document.querySelector("#sound-toggle");
@@ -611,6 +665,9 @@ document.querySelector("#project-form").addEventListener("submit", (event) => {
     `${messages["whatsapp-service"]}: ${serviceName}`,
     `${messages["whatsapp-package"]}: ${packageName}`,
     `${messages["whatsapp-price"]}: ${price}`,
+    ...(data.get("package") === "quote"
+      ? [messages["quote-selection"]]
+      : []),
     "",
     `${messages["whatsapp-details"]}:`,
     data.get("brief")

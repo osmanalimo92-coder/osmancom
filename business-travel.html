@@ -18,9 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=application-trust">
   <script src="assets/qrcode-generator.js" defer></script>
-  <script src="app.js?v=scholarship-services" defer></script>
+  <script src="app.js?v=application-trust" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,6 +45,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#services" data-i18n="nav-services">Services</a>
       <a href="#tourism" data-i18n="nav-tourism">Tourism</a>
+      <a href="#application-support" data-i18n="nav-opportunities">Study &amp; work</a>
       <a href="#work" data-i18n="nav-work">Selected work</a>
       <a href="#about" data-i18n="nav-about">About</a>
     </nav>
@@ -271,6 +272,30 @@
       </div>
     </section>
 
+    <section class="opportunity-section section-pad" id="application-support">
+      <div class="page-width">
+        <div class="section-heading opportunity-heading">
+          <div><p class="eyebrow eyebrow-light" data-i18n="opportunity-eyebrow">Study &amp; work worldwide</p><h2 data-i18n="opportunity-title">Clear steps for <span>your next opportunity.</span></h2></div>
+          <p class="section-intro" data-i18n="opportunity-intro">From university scholarships to international job applications, understand the process before you decide what support you need.</p>
+        </div>
+        <div class="opportunity-steps">
+          <article class="opportunity-step"><span>01</span><h3 data-i18n="opportunity-step-one-title">Tell us your goal</h3><p data-i18n="opportunity-step-one-text">Share your target countries, study or work interests, qualifications, and important deadlines. General details are enough for an initial enquiry.</p></article>
+          <article class="opportunity-step"><span>02</span><h3 data-i18n="opportunity-step-two-title">Review suitable options</h3><p data-i18n="opportunity-step-two-text">We discuss potential opportunities, eligibility criteria, required documents, and the support that may fit your situation.</p></article>
+          <article class="opportunity-step"><span>03</span><h3 data-i18n="opportunity-step-three-title">Agree on support</h3><p data-i18n="opportunity-step-three-text">Review the proposed tasks, timeline, and a custom quote. Work starts only after you agree to the scope and price.</p></article>
+          <article class="opportunity-step"><span>04</span><h3 data-i18n="opportunity-step-four-title">Prepare your applications</h3><p data-i18n="opportunity-step-four-text">Get agreed help organizing materials and preparing or submitting applications. Student flights and accommodation can be discussed separately.</p></article>
+        </div>
+        <p class="opportunity-disclaimer" data-i18n="opportunity-disclaimer">Scholarship awards, university admissions, job offers, visas, and travel availability are decided by the relevant institutions, employers, authorities, and providers; they cannot be guaranteed. Any travel arrangements and costs are confirmed with you before booking.</p>
+        <div class="opportunity-faq">
+          <h3 data-i18n="opportunity-faq-title">Frequently asked questions</h3>
+          <details><summary data-i18n="opportunity-faq-one-question">Can you guarantee a scholarship, admission, job, or visa?</summary><p data-i18n="opportunity-faq-one-answer">No. Decisions are made by universities, scholarship providers, employers, and immigration authorities. We can help with the agreed application support, but cannot promise an outcome.</p></details>
+          <details><summary data-i18n="opportunity-faq-two-question">What should I share for an initial enquiry?</summary><p data-i18n="opportunity-faq-two-answer">Share your general goal, preferred countries, area of study or work, and deadlines. Do not send passwords, payment details, passport scans, or sensitive documents through this public form or WhatsApp.</p></details>
+          <details><summary data-i18n="opportunity-faq-three-question">How are scholarship and job-application services priced?</summary><p data-i18n="opportunity-faq-three-answer">These services are quoted individually after we discuss your needs, tasks, and timeline. You can review and agree to the scope and price before any work begins.</p></details>
+          <details><summary data-i18n="opportunity-faq-four-question">Can you also help with student flights and accommodation?</summary><p data-i18n="opportunity-faq-four-answer">Yes, we can discuss flight booking and student accommodation options separately. Availability and costs are checked with you before any booking is made.</p></details>
+        </div>
+        <a class="button button-gold opportunity-cta" href="#contact"><span data-i18n="opportunity-cta">Ask about study or job support</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
     <section class="pricing-section section-pad" id="pricing">
       <div class="page-width">
         <div class="section-heading pricing-heading">
@@ -396,6 +421,7 @@
                   <option value="consultation" data-i18n="package-option-consultation">Project consultation &amp; inquiries — USD 4,000</option>
                   <option value="staff" data-i18n="package-option-staff">Request staff for specific tasks — USD 1,000</option>
                   <option value="execution" data-i18n="package-option-execution">Project execution &amp; completion — USD 10,000</option>
+                  <option value="quote" data-i18n="package-option-quote" disabled>Scholarship or job support — request a quote</option>
                   <option value="custom" data-i18n="package-option-custom">Other / discuss a custom project</option>
                 </select>
               </label>

@@ -73,6 +73,26 @@ const arabicContent = {
   ],
   ".service-link": ["ناقش تصميم موقعك <span>↗</span>", "طوّر هويتك <span>↗</span>", "خطط لحملة <span>↗</span>", "خطط لجلسة تصوير <span>↗</span>", "احجز استشارة <span>↗</span>", "استفسر عن المنح <span>↗</span>", "ناقش طلبات التوظيف <span>↗</span>"],
   ".services-note": ["<span>✳</span> اختر إحدى الباقات أدناه أو تواصل معنا لمناقشة مشروع خاص."],
+  ".opportunity-heading .eyebrow": ["الدراسة والعمل حول العالم"],
+  ".opportunity-heading h2": ["خطوات واضحة <span>لفرصتك القادمة.</span>"],
+  ".opportunity-heading .section-intro": ["من المنح الجامعية إلى طلبات التوظيف الدولية، تعرّف على الخطوات قبل تحديد الدعم الذي تحتاج إليه."],
+  ".opportunity-step h3": ["أخبرنا بهدفك", "استكشف الخيارات المناسبة", "اتفق على الدعم", "جهّز طلباتك"],
+  ".opportunity-step p": [
+    "شاركنا البلدان التي تفضلها واهتماماتك الدراسية أو المهنية ومؤهلاتك والمواعيد المهمة. تكفي معلومات عامة للاستفسار الأولي.",
+    "نناقش الفرص المحتملة وشروط الأهلية والمستندات المطلوبة والدعم الذي قد يناسبك.",
+    "راجع المهام المقترحة والمدة والتكلفة المخصصة. لا يبدأ العمل إلا بعد موافقتك على نطاقه وسعره.",
+    "احصل على الدعم المتفق عليه لتنظيم المواد وتجهيز الطلبات أو تقديمها. ويمكن مناقشة رحلات الطلاب والسكن بشكل منفصل."
+  ],
+  ".opportunity-disclaimer": ["تتخذ الجامعات ومقدمو المنح وأصحاب العمل والجهات الرسمية ومزودو السفر قرارات القبول والمنح والتوظيف والتأشيرات والتوافر؛ لذلك لا يمكن ضمان النتائج. نؤكد معك ترتيبات السفر والتكاليف قبل الحجز."],
+  ".opportunity-faq > h3": ["الأسئلة الشائعة"],
+  ".opportunity-faq summary": ["هل تضمنون الحصول على منحة أو قبول أو وظيفة أو تأشيرة؟", "ما المعلومات التي أشاركها للاستفسار الأولي؟", "كيف تُحدد تكلفة خدمات المنح والوظائف؟", "هل يمكنكم المساعدة في رحلات الطلاب والسكن؟"],
+  ".opportunity-faq details p": [
+    "لا. تتخذ الجامعات ومقدمو المنح وأصحاب العمل وجهات الهجرة القرارات. يمكننا تقديم الدعم المتفق عليه للطلب، لكن لا نستطيع ضمان النتيجة.",
+    "شارك هدفك العام والبلدان المفضلة ومجال الدراسة أو العمل والمواعيد. لا ترسل كلمات المرور أو بيانات الدفع أو صور جواز السفر أو المستندات الحساسة عبر هذا النموذج أو واتساب.",
+    "نقدم عرضاً مخصصاً بعد مناقشة احتياجاتك والمهام والمدة. يمكنك مراجعة نطاق العمل والسعر والموافقة عليهما قبل بدء أي عمل.",
+    "نعم، يمكننا مناقشة خيارات حجز رحلات الطلاب والسكن بشكل منفصل. نتحقق من التوافر والتكاليف معك قبل إجراء أي حجز."
+  ],
+  ".opportunity-cta": ["استفسر عن دعم الدراسة أو العمل <span aria-hidden=\"true\">↗</span>"],
   ".pricing-heading .eyebrow": ["أسعار بداية واضحة"],
   ".pricing-heading h2": ["اختر <span>خطوتك القادمة.</span>"],
   ".pricing-heading .section-intro": ["اختر مستوى الدعم المناسب لمشروعك. نؤكد معك تفاصيل كل طلب قبل بدء العمل."],
@@ -124,7 +144,7 @@ const arabicContent = {
   ".about-values b": ["أستمع أولاً", "أفكر بعناية", "أصنع ما لا يُنسى"],
   ".contact-heading .eyebrow": ["خطوتك القادمة تبدأ هنا"],
   ".contact-heading h2": ["لنصنع معاً ما<br><span>يستحق الحديث عنه.</span>"],
-  ".contact-heading .section-intro": ["اختر الخدمة والباقة، وأخبرنا بما تحتاجه. سيُضاف السعر إلى استفسارك عبر واتساب."],
+  ".contact-heading .section-intro": ["اختر الخدمة وأخبرنا بما تحتاج إليه. تُضاف أسعار الباقات الحالية إلى استفسارك؛ أما دعم المنح والوظائف فيُسعّر حسب الطلب."],
   ".form-topline span": ["استفسار عن مشروع", "٠١ — ٠٤"],
   ".package-selection": ["الباقة المختارة — السعر حسب الاتفاق."],
   ".form-submit": ["أرسل استفسارك عبر واتساب <span aria-hidden=\"true\">↗</span>"],
@@ -183,6 +203,7 @@ const arabicPackageOptions = [
   "استشارات واستفسارات المشاريع — ٤٬٠٠٠ دولار أمريكي",
   "طلب موظفين لمهام محددة — ١٬٠٠٠ دولار أمريكي",
   "تنفيذ المشروع وإتمامه — ١٠٬٠٠٠ دولار أمريكي",
+  "دعم المنح أو التوظيف — اطلب عرض سعر",
   "خدمة أخرى / ناقش مشروعاً خاصاً"
 ];
 
@@ -418,7 +439,10 @@ document.querySelectorAll("[data-service-link]").forEach((link) => {
     const matchingOption = Array.from(serviceSelect.options).find(
       (option) => option.value === service || option.textContent.trim() === service
     );
-    if (matchingOption) serviceSelect.value = matchingOption.value;
+    if (matchingOption) {
+      serviceSelect.value = matchingOption.value;
+      serviceSelect.dispatchEvent(new Event("change"));
+    }
   });
 });
 
@@ -433,6 +457,18 @@ function updatePackageSelection() {
     : option?.textContent.trim() ?? "";
 }
 
+function updateServiceQuote() {
+  const quoteOption = packageSelect.querySelector('option[value="quote"]');
+  const needsQuote = ["Scholarship applications", "Global job applications"].includes(serviceSelect.value);
+  quoteOption.disabled = !needsQuote;
+  if (needsQuote) {
+    packageSelect.value = "quote";
+  } else if (packageSelect.value === "quote") {
+    packageSelect.value = "";
+  }
+  updatePackageSelection();
+}
+
 document.querySelectorAll("[data-package]").forEach((link) => {
   link.addEventListener("click", () => {
     packageSelect.value = link.dataset.package;
@@ -441,6 +477,7 @@ document.querySelectorAll("[data-package]").forEach((link) => {
 });
 
 packageSelect.addEventListener("change", updatePackageSelection);
+serviceSelect.addEventListener("change", updateServiceQuote);
 
 function escapeVcard(value) {
   return value.replace(/([,;\\])/g, "\\$1").replace(/\r?\n/g, "\\n");
@@ -515,6 +552,11 @@ document.querySelector("#project-form").addEventListener("submit", (event) => {
     `${isArabic ? "الشركة أو المؤسسة" : "Business or organization"}: ${data.get("business") || (isArabic ? "غير محدد" : "Not provided")}`,
     `${isArabic ? "الخدمة" : "Service"}: ${services[data.get("service")] || data.get("service")}`,
     `${isArabic ? "الباقة" : "Package"}: ${packageSelect.selectedOptions[0].textContent.trim()}`,
+    ...(data.get("package") === "quote"
+      ? [isArabic
+        ? "يرجى تأكيد نطاق العمل والتكلفة قبل البدء."
+        : "Please confirm the scope and price before work begins."]
+      : []),
     "",
     isArabic ? "تفاصيل المشروع:" : "Project details:",
     data.get("brief")
