@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f7f2">
-  <meta name="description" content="OSMANCOM — website design, graphic design, marketing, photography, and consulting. Tell Osman about your project and request a tailored quote.">
+  <meta name="theme-color" content="#174b4a">
+  <meta name="description" content="OSMANCOM brings creative business support and memorable travel planning together, from website and brand design to tickets, stays, and guided trips.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://osmanalimo92-coder.github.io/osmancom/">
   <meta property="og:title" content="OSMANCOM — Creative services for ambitious businesses">
-  <meta property="og:description" content="Smart creative work for ambitious businesses — from website and brand design to marketing, photography, and consulting.">
+  <meta property="og:description" content="Creative business support and memorable travel planning, from brand design to tickets, stays, and guided trips.">
   <meta property="og:image" content="https://osmanalimo92-coder.github.io/osmancom/assets/osman-adam-ali.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="OSMANCOM — Creative services for ambitious businesses">
-  <meta name="twitter:description" content="Smart creative work for ambitious businesses — from website and brand design to marketing, photography, and consulting.">
+  <meta name="twitter:description" content="Creative business support and memorable travel planning, from brand design to tickets, stays, and guided trips.">
   <link rel="canonical" href="https://osmanalimo92-coder.github.io/osmancom/">
   <title>OSMANCOM — Creative services for ambitious businesses</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,7 @@
     </button>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
+      <a href="#tourism">Travel</a>
       <a href="#work">Selected work</a>
       <a href="#about">About</a>
       <a class="mobile-nav-cta" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
@@ -68,6 +69,71 @@
         </div>
       </div>
       <div class="hero-bottom page-width"><span>DESIGN THAT EARNS ATTENTION</span><span class="hero-bottom-line"></span><span>DETAIL THAT EARNS TRUST</span><a href="#services" aria-label="Scroll to services">↓</a></div>
+    </section>
+
+    <section class="tourism-section creative-tourism" id="tourism" aria-labelledby="tourism-title">
+      <div class="tourism-cover">
+        <div class="tourism-cover-content page-width">
+          <p class="eyebrow">A little more sunshine</p>
+          <h2 id="tourism-title">Find your next<br><span>beautiful escape.</span></h2>
+          <p>From tickets and relaxing stays to local guides and family adventures, let’s make the journey feel just as special as the destination.</p>
+          <div class="tourism-cover-actions">
+            <a class="button button-tour" href="#contact" data-service-link="Travel & tourism">Plan a trip <span aria-hidden="true">↗</span></a>
+            <button class="sound-toggle" id="coastal-sound-toggle" type="button" aria-pressed="false" aria-label="Play gentle ocean waves, birds and soft ambient music">
+              <span class="sound-icon" aria-hidden="true">♫</span><span data-sound-label>Play ocean sounds</span>
+            </button>
+          </div>
+          <p class="sound-note" id="coastal-sound-note" aria-live="polite">Sound is optional and starts only when you choose to play it.</p>
+        </div>
+        <svg class="coast-scene" viewBox="0 0 1440 310" role="img" aria-label="A tropical shore with palm trees, birds and a sailboat floating on gentle waves" preserveAspectRatio="xMidYMax slice">
+          <g class="coast-palms">
+            <path d="M145 310 177 110l17 4-24 196zm18-193Q94 74 75 40q42 4 94 55-50-70-49-96 41 28 67 87-19-67-4-98 28 42 31 101 11-68 36-87 3 40-20 95 31-50 67-52-25 44-84 76z"/>
+            <path d="m1270 310 25-182 15 2-14 180zm23-175q-64-43-64-69 39 7 74 46-35-61-25-82 33 28 48 81-6-60 13-83 18 40 9 88 23-52 49-63-8 35-34 75 34-34 63-29-25 34-81 55z"/>
+          </g>
+          <g class="coast-birds">
+            <path d="M368 104q18-20 36 0 18-20 36 0-18-12-36 7-18-19-36-7zm128-31q13-15 26 0 13-15 26 0-13-9-26 5-13-14-26-5zm431 49q15-17 30 0 15-17 30 0-15-10-30 6-15-16-30-6z"/>
+          </g>
+          <g class="coast-boat">
+            <path d="M575 227h154l-24 29h-99z"/>
+            <path d="M650 218v-82l58 82z"/>
+            <path d="M644 218v-59l-38 59z"/>
+            <path d="M564 265q91 21 183 0" fill="none" stroke="currentColor" stroke-width="3"/>
+          </g>
+        </svg>
+        <div class="coast-waves" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+      <div class="page-width tourism-content">
+        <div class="tourism-heading">
+          <div><p class="eyebrow eyebrow-light">Travel inspiration</p><h2>Make room for <span>somewhere new.</span></h2></div>
+          <p class="section-intro">A few ideas for your next change of scenery. Tell us what you have in mind and we’ll plan the details together.</p>
+        </div>
+        <div class="tour-gallery-controls">
+          <span class="tour-gallery-hint">A glimpse of what’s waiting</span>
+          <div>
+            <button class="gallery-control" type="button" data-coastal-gallery-direction="-1" aria-label="Show previous travel photos">←</button>
+            <button class="gallery-control" type="button" data-coastal-gallery-direction="1" aria-label="Show next travel photos">→</button>
+          </div>
+        </div>
+        <div class="tour-gallery-track" id="coastal-gallery" aria-label="Travel inspiration photo gallery" tabindex="0">
+          <figure class="tour-photo-card">
+            <img src="assets/tour-beach.jpg" alt="Quiet turquoise coastline at golden hour" loading="lazy" decoding="async">
+            <figcaption>Sunlit coastlines</figcaption>
+          </figure>
+          <figure class="tour-photo-card">
+            <img src="assets/tour-hotel.jpg" alt="A resort hotel nestled among tropical palms" loading="lazy" decoding="async">
+            <figcaption>Restful stays</figcaption>
+          </figure>
+          <figure class="tour-photo-card">
+            <img src="assets/tour-guide.jpg" alt="Travelers discovering a scenic local destination" loading="lazy" decoding="async">
+            <figcaption>Guided discoveries</figcaption>
+          </figure>
+          <figure class="tour-photo-card">
+            <img src="assets/tour-family.jpg" alt="A sunny beach with palm trees and a small sailboat" loading="lazy" decoding="async">
+            <figcaption>Open water &amp; new memories</figcaption>
+          </figure>
+        </div>
+        <a class="text-link tourism-contact-link" href="#contact" data-service-link="Travel & tourism">Let’s plan your getaway <span aria-hidden="true">↗</span></a>
+      </div>
     </section>
 
     <section class="services-section section-pad" id="services">
@@ -222,7 +288,7 @@
               <label class="field-label">Creative work you need <span>*</span>
                 <select name="service" required>
                   <option value="" selected disabled>Choose a service</option>
-                  <option>Website design</option><option>Graphic &amp; brand design</option><option>Marketing</option><option>Photography</option><option>Consulting</option><option>A mix of services</option>
+                  <option>Website design</option><option>Graphic &amp; brand design</option><option>Marketing</option><option>Photography</option><option>Consulting</option>                  <option>A mix of services</option><option>Travel &amp; tourism</option>
                 </select>
               </label>
               <label class="field-label">Service package <span>*</span>

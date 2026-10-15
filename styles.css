@@ -1186,3 +1186,155 @@ section[id] { scroll-margin-top: 94px; }
   .availability-dot,
   .visual-label { animation: none; }
 }
+
+body::before { border-color: #6b9b91; }
+.main-nav { gap: 23px; }
+
+.creative-tourism {
+  background: linear-gradient(180deg, #f2f7f3, #e6f0ec);
+  color: #183d3a;
+}
+.creative-tourism .tourism-cover {
+  min-height: 540px;
+  background-color: #286d69;
+}
+.creative-tourism .tourism-cover::before {
+  background-position: center 48%;
+}
+.creative-tourism .tourism-cover::after {
+  background:
+    linear-gradient(90deg, #103b39ed 0%, #164e49c7 43%, #164a4370 72%, #164a4330 100%),
+    linear-gradient(0deg, #174e46a8, transparent 50%);
+}
+.creative-tourism .tourism-cover-content {
+  min-height: 500px;
+  padding-block: 75px 140px;
+}
+.creative-tourism .tourism-cover-content .eyebrow {
+  color: #b9dfce;
+}
+.creative-tourism .tourism-cover h2 {
+  max-width: 720px;
+  font-size: clamp(44px, 6.2vw, 76px);
+}
+.creative-tourism .tourism-cover h2 span {
+  color: #ead6a5;
+}
+.creative-tourism .tourism-cover-content > p:not(.eyebrow, .sound-note) {
+  max-width: 530px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.creative-tourism .button-tour {
+  min-height: 48px;
+  background: linear-gradient(120deg, #e5d1a0, #f2e7c7);
+  box-shadow: 0 8px 24px #082e2b50, inset 0 1px #fff9;
+  color: #173d38;
+}
+.creative-tourism .button-tour:hover {
+  background: linear-gradient(120deg, #f0dfb4, #fff2d1);
+}
+.creative-tourism .sound-toggle {
+  min-height: 48px;
+  border-color: #d4ebe1aa;
+  border-radius: 6px;
+  background: #103e3ab8;
+  font-size: 12px;
+}
+.creative-tourism .sound-toggle:hover,
+.creative-tourism .sound-toggle[aria-pressed="true"] {
+  background: #0a302ddf;
+}
+.creative-tourism .sound-toggle:disabled {
+  cursor: wait;
+  opacity: .75;
+}
+.creative-tourism .sound-note {
+  color: #e3f0e9;
+  font-size: 11px;
+}
+.creative-tourism .coast-scene {
+  fill: #0e4944d9;
+  color: #e8d4a0;
+}
+.creative-tourism .coast-birds {
+  fill: #f7efd8;
+  animation: float-soft 5s ease-in-out infinite alternate;
+}
+.creative-tourism .coast-boat { fill: #f8f1df; }
+.creative-tourism .coast-waves {
+  background: linear-gradient(180deg, #62a99cdd, #287c77);
+}
+.creative-tourism .tourism-content {
+  padding-block: 70px 76px;
+}
+.creative-tourism .tourism-heading h2 {
+  color: #183d3a;
+}
+.creative-tourism .tourism-heading h2 span {
+  color: #367d72;
+}
+.creative-tourism .tourism-heading .section-intro,
+.creative-tourism .tour-gallery-hint {
+  color: #536d66;
+}
+.creative-tourism .gallery-control {
+  border-color: #4b908466;
+  color: #246b62;
+}
+.creative-tourism .gallery-control:hover {
+  background: #dceee7;
+}
+.creative-tourism .tour-gallery-track {
+  scrollbar-color: #78aa9c #e4eee8;
+}
+.creative-tourism .tour-photo-card {
+  min-width: calc((100% - 42px) / 4);
+  border-color: #43857538;
+  border-radius: 9px;
+  background: #fffefa;
+  box-shadow: 0 13px 30px #1a504415;
+}
+.creative-tourism .tour-photo-card img {
+  height: 205px;
+}
+.creative-tourism .tour-photo-card figcaption {
+  color: #244c43;
+  font-size: 12px;
+}
+.creative-tourism .tourism-contact-link {
+  margin-top: 16px;
+  display: inline-flex;
+  font-size: 13px;
+}
+
+@media (min-width: 901px) {
+  .creative-tourism .tour-gallery-controls > div { display: none; }
+}
+
+@media (max-width: 900px) {
+  .main-nav { gap: 15px; }
+  .creative-tourism .tour-photo-card {
+    min-width: calc((100% - 28px) / 3);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav { gap: 0; }
+  .creative-tourism .tourism-cover { min-height: 500px; }
+  .creative-tourism .tourism-cover-content {
+    min-height: 460px;
+    padding-block: 55px 125px;
+  }
+  .creative-tourism .tourism-cover h2 { font-size: 43px; }
+  .creative-tourism .tourism-cover-content > p:not(.eyebrow, .sound-note) {
+    font-size: 14px;
+  }
+  .creative-tourism .tourism-content { padding-block: 52px 60px; }
+  .creative-tourism .tour-photo-card { min-width: min(78vw, 310px); }
+  .creative-tourism .tour-photo-card img { height: 190px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .creative-tourism .coast-birds { animation: none; }
+}
