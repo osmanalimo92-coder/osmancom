@@ -648,64 +648,35 @@ body::before {
   color: #fff0f3;
   font-size: 9px;
 }
-
-.coast-scene {
-  width: 100%;
-  height: 48%;
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 22px;
-  left: 0;
-  fill: #19433bcc;
-  color: #f2a8bb;
-  pointer-events: none;
+.sound-volume {
+  max-width: 300px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
 }
-
-.coast-palms {
-  transform-origin: 50% 100%;
-  animation: palm-sway 7s ease-in-out infinite alternate;
+.sound-volume input {
+  min-width: 80px;
+  flex: 1;
+  accent-color: #f4b0c4;
+  cursor: pointer;
 }
-
-.coast-boat {
-  fill: #fbf0e4;
-  animation: boat-float 4.5s ease-in-out infinite;
+.sound-volume output {
+  min-width: 35px;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
 }
-
-.coast-waves {
-  height: 70px;
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  background: linear-gradient(180deg, #82c3b66b, #65aa9b);
+.sound-credit {
+  margin: 7px 0 0;
+  color: #ffedf1;
+  font-size: 9px;
 }
-
-.coast-waves span {
-  width: 120%;
-  height: 45px;
-  position: absolute;
-  bottom: 22px;
-  left: -10%;
-  border-top: 2px solid #ffffff75;
-  border-radius: 48% 52% 0 0;
-  animation: tide-drift 8s ease-in-out infinite alternate;
-}
-
-.coast-waves span:nth-child(2) {
-  bottom: 12px;
-  left: -15%;
-  border-color: #ffffff50;
-  animation-delay: -3s;
-}
-
-.coast-waves span:nth-child(3) {
-  bottom: 2px;
-  left: -5%;
-  border-color: #fff3;
-  animation-delay: -5s;
+.sound-credit a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .tourism-content {
@@ -1055,9 +1026,6 @@ html[dir="rtl"] .tour-photo-card figcaption {
 
 @media (prefers-reduced-motion: reduce) {
   .tourism-cover::before,
-  .coast-palms,
-  .coast-boat,
-  .coast-waves span,
   .tour-photo-card img { animation: none; transition: none; }
   .tour-gallery-track { scroll-behavior: auto; }
 }
@@ -1244,18 +1212,6 @@ body::before { border-color: #6b9b91; }
   color: #e3f0e9;
   font-size: 11px;
 }
-.creative-tourism .coast-scene {
-  fill: #0e4944d9;
-  color: #e8d4a0;
-}
-.creative-tourism .coast-birds {
-  fill: #f7efd8;
-  animation: float-soft 5s ease-in-out infinite alternate;
-}
-.creative-tourism .coast-boat { fill: #f8f1df; }
-.creative-tourism .coast-waves {
-  background: linear-gradient(180deg, #62a99cdd, #287c77);
-}
 .creative-tourism .tourism-content {
   padding-block: 70px 76px;
 }
@@ -1280,7 +1236,7 @@ body::before { border-color: #6b9b91; }
   scrollbar-color: #78aa9c #e4eee8;
 }
 .creative-tourism .tour-photo-card {
-  min-width: calc((100% - 42px) / 4);
+  min-width: calc((100% - 56px) / 5);
   border-color: #43857538;
   border-radius: 9px;
   background: #fffefa;
@@ -1292,6 +1248,11 @@ body::before { border-color: #6b9b91; }
 .creative-tourism .tour-photo-card figcaption {
   color: #244c43;
   font-size: 12px;
+}
+.creative-tourism .tour-photo-card figcaption a {
+  color: #367d72;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .creative-tourism .tourism-contact-link {
   margin-top: 16px;
@@ -1380,8 +1341,4 @@ body::before { border-color: #6b9b91; }
   .creative-tourism .tourism-content { padding-block: 52px 60px; }
   .creative-tourism .tour-photo-card { min-width: min(78vw, 310px); }
   .creative-tourism .tour-photo-card img { height: 190px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .creative-tourism .coast-birds { animation: none; }
 }

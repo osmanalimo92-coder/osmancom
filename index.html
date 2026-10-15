@@ -76,28 +76,20 @@
           <p>From tickets and relaxing stays to local guides and family adventures, let’s make the journey feel just as special as the destination.</p>
           <div class="tourism-cover-actions">
             <a class="button button-tour" href="#contact" data-service-link="Travel & tourism">Plan a trip <span aria-hidden="true">↗</span></a>
-            <button class="sound-toggle" id="coastal-sound-toggle" type="button" aria-pressed="false" aria-label="Play gentle ocean waves, birds and soft ambient music">
+            <button class="sound-toggle" id="coastal-sound-toggle" type="button" aria-pressed="false" aria-label="Play recorded surf and seagull sounds">
               <span class="sound-icon" aria-hidden="true">♫</span><span data-sound-label>Play ocean sounds</span>
             </button>
           </div>
-          <p class="sound-note" id="coastal-sound-note" aria-live="polite">Sound is optional and starts only when you choose to play it.</p>
+          <label class="sound-volume" for="coastal-sound-volume">
+            <span>Sound volume</span>
+            <input id="coastal-sound-volume" type="range" min="0" max="100" value="90">
+            <output id="coastal-sound-volume-value" for="coastal-sound-volume">90%</output>
+          </label>
+          <p class="sound-note" id="coastal-sound-note" aria-live="polite">Real recordings of surf and seaside gulls. Sound starts only when you choose to play it.</p>
+          <p class="sound-credit">Audio: earthcalling via Wikimedia Commons, public domain — <a href="https://commons.wikimedia.org/wiki/File:On_a_pebble_beach.ogg" target="_blank" rel="noopener noreferrer">surf</a> and <a href="https://commons.wikimedia.org/wiki/File:Gulls_above_the_street_at_dawn.ogg" target="_blank" rel="noopener noreferrer">seaside gulls</a>.</p>
         </div>
-        <svg class="coast-scene" viewBox="0 0 1440 310" role="img" aria-label="A tropical shore with palm trees, birds and a sailboat floating on gentle waves" preserveAspectRatio="xMidYMax slice">
-          <g class="coast-palms">
-            <path d="M145 310 177 110l17 4-24 196zm18-193Q94 74 75 40q42 4 94 55-50-70-49-96 41 28 67 87-19-67-4-98 28 42 31 101 11-68 36-87 3 40-20 95 31-50 67-52-25 44-84 76z"/>
-            <path d="m1270 310 25-182 15 2-14 180zm23-175q-64-43-64-69 39 7 74 46-35-61-25-82 33 28 48 81-6-60 13-83 18 40 9 88 23-52 49-63-8 35-34 75 34-34 63-29-25 34-81 55z"/>
-          </g>
-          <g class="coast-birds">
-            <path d="M368 104q18-20 36 0 18-20 36 0-18-12-36 7-18-19-36-7zm128-31q13-15 26 0 13-15 26 0-13-9-26 5-13-14-26-5zm431 49q15-17 30 0 15-17 30 0-15-10-30 6-15-16-30-6z"/>
-          </g>
-          <g class="coast-boat">
-            <path d="M575 227h154l-24 29h-99z"/>
-            <path d="M650 218v-82l58 82z"/>
-            <path d="M644 218v-59l-38 59z"/>
-            <path d="M564 265q91 21 183 0" fill="none" stroke="currentColor" stroke-width="3"/>
-          </g>
-        </svg>
-        <div class="coast-waves" aria-hidden="true"><span></span><span></span><span></span></div>
+        <audio id="coastal-waves-audio" preload="none" loop src="https://upload.wikimedia.org/wikipedia/commons/7/73/On_a_pebble_beach.ogg"></audio>
+        <audio id="coastal-birds-audio" preload="none" loop src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gulls_above_the_street_at_dawn.ogg"></audio>
       </div>
       <div class="page-width tourism-content">
         <div class="tourism-heading">
@@ -127,6 +119,10 @@
           <figure class="tour-photo-card">
             <img src="assets/tour-family.jpg" alt="A sunny beach with palm trees and a small sailboat" loading="lazy" decoding="async">
             <figcaption>Open water &amp; new memories</figcaption>
+          </figure>
+          <figure class="tour-photo-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Seagull_flying_over_the_sea.jpg/960px-Seagull_flying_over_the_sea.jpg" alt="A real seagull flying above the ocean in Garopaba" loading="lazy" decoding="async">
+            <figcaption>Seabirds over the water · <a href="https://commons.wikimedia.org/wiki/File:Seagull_flying_over_the_sea.jpg" target="_blank" rel="noopener noreferrer">Photo: Heylenny, CC BY-SA 4.0</a></figcaption>
           </figure>
         </div>
         <div class="tourism-services">

@@ -46,153 +46,70 @@ document.querySelectorAll("[data-coastal-gallery-direction]").forEach((button) =
 
 const soundToggle = document.querySelector("#coastal-sound-toggle");
 const soundNote = document.querySelector("#coastal-sound-note");
-let coastalAudio = null;
+const soundVolume = document.querySelector("#coastal-sound-volume");
+const soundVolumeValue = document.querySelector("#coastal-sound-volume-value");
+const coastalAudioTracks = [
+  document.querySelector("#coastal-waves-audio"),
+  document.querySelector("#coastal-birds-audio")
+];
+let coastalAudioPlaying = false;
 
 function updateSoundControl(isPlaying) {
   soundToggle.setAttribute("aria-pressed", String(isPlaying));
   soundToggle.setAttribute(
     "aria-label",
-    isPlaying ? "Turn off ocean waves, birds and ambient music" : "Play gentle ocean waves, birds and soft ambient music"
+    isPlaying ? "Stop recorded surf and seagull sounds" : "Play recorded surf and seagull sounds"
   );
   soundToggle.querySelector("[data-sound-label]").textContent = isPlaying
-    ? "Turn sounds off"
-    : "Play ocean sounds";
+    ? "Stop coastal sounds"
+    : "Play sea & bird sounds";
+}
+
+function updateCoastalVolume() {
+  const volume = Number(soundVolume.value) / 100;
+  coastalAudioTracks[0].volume = volume * 0.75;
+  coastalAudioTracks[1].volume = volume * 0.55;
+  soundVolumeValue.value = `${soundVolume.value}%`;
+  soundVolumeValue.textContent = `${soundVolume.value}%`;
 }
 
 async function startCoastalAudio() {
-  const AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContextConstructor) {
-    throw new Error("Web Audio is not supported by this browser.");
-  }
-
-  const context = new AudioContextConstructor();
+  const playback = coastalAudioTracks.map((track) => track.play());
   try {
-    await context.resume();
-    const master = context.createGain();
-    master.gain.value = 0.35;
-    master.connect(context.destination);
-
-    const noiseBuffer = context.createBuffer(1, context.sampleRate * 3, context.sampleRate);
-    const noise = noiseBuffer.getChannelData(0);
-    for (let index = 0; index < noise.length; index += 1) {
-      noise[index] = Math.random() * 2 - 1;
-    }
-
-    const waves = context.createBufferSource();
-    waves.buffer = noiseBuffer;
-    waves.loop = true;
-    const filter = context.createBiquadFilter();
-    filter.type = "lowpass";
-    filter.frequency.value = 620;
-    const waveGain = context.createGain();
-    waveGain.gain.value = 0.12;
-    waves.connect(filter);
-    filter.connect(waveGain);
-    waveGain.connect(master);
-    waves.start();
-
-    const swell = context.createOscillator();
-    const swellDepth = context.createGain();
-    swell.frequency.value = 0.08;
-    swellDepth.gain.value = 0.065;
-    swell.connect(swellDepth);
-    swellDepth.connect(waveGain.gain);
-    swell.start();
-
-    [196, 246.94, 293.66].forEach((frequency) => {
-      const note = context.createOscillator();
-      const noteGain = context.createGain();
-      note.type = "sine";
-      note.frequency.value = frequency;
-      noteGain.gain.value = 0.008;
-      note.connect(noteGain);
-      noteGain.connect(master);
-      note.start();
-    });
-
-    const melody = [392, 329.63, 293.66, 246.94, 293.66, 329.63];
-    let melodyIndex = 0;
-    const playAmbientNote = () => {
-      if (context.state !== "running") return;
-      const note = context.createOscillator();
-      const noteGain = context.createGain();
-      const now = context.currentTime;
-      note.type = "sine";
-      note.frequency.value = melody[melodyIndex];
-      melodyIndex = (melodyIndex + 1) % melody.length;
-      noteGain.gain.setValueAtTime(0.0001, now);
-      noteGain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
-      noteGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.8);
-      note.connect(noteGain);
-      noteGain.connect(master);
-      note.start(now);
-      note.stop(now + 1.9);
-    };
-    playAmbientNote();
-    const melodyInterval = window.setInterval(playAmbientNote, 2200);
-
-    const birdTimeouts = new Set();
-    const chirp = () => {
-      if (context.state !== "running") return;
-      const bird = context.createOscillator();
-      const birdGain = context.createGain();
-      const now = context.currentTime;
-      const pitch = 1700 + Math.random() * 600;
-      bird.type = "sine";
-      bird.frequency.setValueAtTime(pitch, now);
-      bird.frequency.exponentialRampToValueAtTime(pitch * 1.4, now + 0.12);
-      bird.frequency.exponentialRampToValueAtTime(pitch * 0.8, now + 0.28);
-      birdGain.gain.setValueAtTime(0.0001, now);
-      birdGain.gain.exponentialRampToValueAtTime(0.018, now + 0.04);
-      birdGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.3);
-      bird.connect(birdGain);
-      birdGain.connect(master);
-      bird.start(now);
-      bird.stop(now + 0.31);
-    };
-    const queueChirp = (delay) => {
-      const timeout = window.setTimeout(() => {
-        birdTimeouts.delete(timeout);
-        if (coastalAudio?.context !== context) return;
-        chirp();
-        if (Math.random() > 0.55) queueChirp(380);
-      }, delay);
-      birdTimeouts.add(timeout);
-    };
-    const birdInterval = window.setInterval(() => queueChirp(0), 7000);
-
-    coastalAudio = { context, birdInterval, birdTimeouts, melodyInterval };
-    queueChirp(900);
+    await Promise.all(playback);
   } catch (error) {
-    await context.close();
+    coastalAudioTracks.forEach((track) => track.pause());
     throw error;
   }
+  coastalAudioPlaying = true;
 }
 
-async function stopCoastalAudio() {
-  if (!coastalAudio) return;
-  const audio = coastalAudio;
-  coastalAudio = null;
-  window.clearInterval(audio.birdInterval);
-  window.clearInterval(audio.melodyInterval);
-  audio.birdTimeouts.forEach((timeout) => window.clearTimeout(timeout));
-  await audio.context.close();
+function stopCoastalAudio() {
+  coastalAudioTracks.forEach((track) => {
+    track.pause();
+    track.currentTime = 0;
+  });
+  coastalAudioPlaying = false;
 }
+
+soundVolume.addEventListener("input", updateCoastalVolume);
+updateCoastalVolume();
 
 soundToggle.addEventListener("click", async () => {
   soundToggle.disabled = true;
   try {
-    if (coastalAudio) {
-      await stopCoastalAudio();
-      soundNote.textContent = "Ocean sounds are off.";
+    if (coastalAudioPlaying) {
+      stopCoastalAudio();
+      soundNote.textContent = "Coastal recordings are off.";
     } else {
       await startCoastalAudio();
-      soundNote.textContent = "Playing gentle ocean waves, birds and soft ambient music.";
+      soundNote.textContent = "Playing real surf and seaside gull recordings.";
     }
-    updateSoundControl(Boolean(coastalAudio));
+    updateSoundControl(coastalAudioPlaying);
   } catch (error) {
-    console.error("Could not change the coastal ambience.", error);
-    soundNote.textContent = "Sound could not start in this browser. Please check your audio settings and try again.";
+    console.error("Could not play the coastal recordings.", error);
+    soundNote.textContent = "The coastal recordings could not be loaded. Check your connection and try again.";
+    updateSoundControl(false);
   } finally {
     soundToggle.disabled = false;
   }
