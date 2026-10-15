@@ -17,7 +17,7 @@
   <title>OSMANCOM — Creative services for ambitious businesses</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="assets/qrcode-generator.js" defer></script>
   <script src="creative.js" defer></script>
@@ -29,15 +29,18 @@
       <span class="brand-mark" aria-hidden="true">O</span>
       <span>OSMAN<span class="brand-light">COM</span></span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="menu-toggle-label">Menu</span>
-    </button>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact Us</a>
     </nav>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" lang="ar" aria-label="عرض الموقع باللغة العربية">العربية</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="menu-toggle-label">Menu</span>
+      </button>
+    </div>
   </header>
 
   <main id="main-content">
@@ -208,21 +211,21 @@
             <span class="pricing-number">01 / DIGITAL</span>
             <h3>Website subscription</h3>
             <p>A subscription for a professional online presence for your business.</p>
-            <div class="pricing-amount"><span>SAR</span><strong>5,000</strong></div>
+            <div class="pricing-amount"><span>USD</span><strong>5,000</strong></div>
             <a class="pricing-link" href="#contact" data-package="website">Choose this service <span aria-hidden="true">↗</span></a>
           </article>
           <article class="pricing-card">
             <span class="pricing-number">02 / GUIDANCE</span>
             <h3>Project consultation &amp; inquiries</h3>
             <p>Discuss your project, ask questions, and explore a practical way forward.</p>
-            <div class="pricing-amount"><span>SAR</span><strong>4,000</strong></div>
+            <div class="pricing-amount"><span>USD</span><strong>4,000</strong></div>
             <a class="pricing-link" href="#contact" data-package="consultation">Choose this service <span aria-hidden="true">↗</span></a>
           </article>
           <article class="pricing-card">
             <span class="pricing-number">03 / TASK SUPPORT</span>
             <h3>Request staff for specific tasks</h3>
             <p>Request staff support to complete specific tasks for your project.</p>
-            <div class="pricing-amount"><span>SAR</span><strong>1,000</strong></div>
+            <div class="pricing-amount"><span>USD</span><strong>1,000</strong></div>
             <a class="pricing-link" href="#contact" data-package="staff">Choose this service <span aria-hidden="true">↗</span></a>
           </article>
           <article class="pricing-card pricing-card-featured">
@@ -230,7 +233,7 @@
             <span class="pricing-number">04 / END TO END</span>
             <h3>Project execution &amp; completion</h3>
             <p>Request a team to execute your project and complete its tasks.</p>
-            <div class="pricing-amount"><span>SAR</span><strong>10,000</strong></div>
+            <div class="pricing-amount"><span>USD</span><strong>10,000</strong></div>
             <a class="pricing-link" href="#contact" data-package="execution">Choose this service <span aria-hidden="true">↗</span></a>
           </article>
         </div>
@@ -312,16 +315,16 @@
               <label class="field-label">Creative work you need <span>*</span>
                 <select name="service" required>
                   <option value="" selected disabled>Choose a service</option>
-                  <option>Website design</option><option>Graphic &amp; brand design</option><option>Marketing</option><option>Photography</option><option>Consulting</option>                  <option>A mix of services</option><option>Travel &amp; tourism</option>
+                  <option value="Website design">Website design</option><option value="Graphic &amp; brand design">Graphic &amp; brand design</option><option value="Marketing">Marketing</option><option value="Photography">Photography</option><option value="Consulting">Consulting</option><option value="A mix of services">A mix of services</option><option value="Travel &amp; tourism">Travel &amp; tourism</option>
                 </select>
               </label>
               <label class="field-label">Service package <span>*</span>
                 <select name="package" id="package-select" required>
                   <option value="" selected disabled>Choose a service package</option>
-                  <option value="website">Website subscription — SAR 5,000</option>
-                  <option value="consultation">Project consultation &amp; inquiries — SAR 4,000</option>
-                  <option value="staff">Request staff for specific tasks — SAR 1,000</option>
-                  <option value="execution">Project execution &amp; completion — SAR 10,000</option>
+                  <option value="website">Website subscription — USD 5,000</option>
+                  <option value="consultation">Project consultation &amp; inquiries — USD 4,000</option>
+                  <option value="staff">Request staff for specific tasks — USD 1,000</option>
+                  <option value="execution">Project execution &amp; completion — USD 10,000</option>
                   <option value="custom">Other / discuss a custom project</option>
                 </select>
               </label>
